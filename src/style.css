@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;700&display=swap');
+
 /* Global CSS Variables*/
 :root {
   --primary-color: #3498db;
@@ -10,7 +13,7 @@
 }
 
 body {
-  font-family: sans-serif;
+  font-family: 'IBM Plex Mono', monospace;
   line-height: 1.6;
   margin: 0;
   padding: 0;

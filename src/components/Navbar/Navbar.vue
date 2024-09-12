@@ -75,6 +75,7 @@ function toggleMenu() {
     width: 100%;
     padding: 1rem;
     border-bottom: 1px solid;
+    background-color: white;
   }
 
   .navbar_links.is-active {
