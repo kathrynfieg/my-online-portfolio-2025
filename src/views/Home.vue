@@ -1,3 +1,7 @@
+<script setup lang="ts">
+import router from '@/router';
+</script>
+
 <template>
   <div class="home-screen container">
     <h1>Hi there!</h1>
@@ -6,7 +10,7 @@
       A <span class="role">Frontend Developer</span> based in Adelaide, South
       Australia<span class="blinking-cursor">|</span>
     </p>
-    <button>My Projects</button>
+    <button @click="router.push('/projects')">My Projects</button>
   </div>
 </template>
 
@@ -31,12 +35,18 @@
 }
 
 button {
+  cursor: pointer;
   border: 2px solid;
   padding: 0.5rem;
   width: 8rem;
   margin-top: 2rem;
   background-color: white;
   font-family: 'IBM Plex Mono', monospace;
+}
+
+button:hover {
+  background-color: cadetblue;
+  color: white;
 }
 
 @keyframes blink {
