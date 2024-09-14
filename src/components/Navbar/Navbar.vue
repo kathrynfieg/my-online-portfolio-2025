@@ -18,6 +18,12 @@ function toggleMenu() {
       <a href="#about">About</a>
       <a href="#projects">Projects</a>
       <a href="#blog">Blog</a>
+      <a href="https://github.com/kathrynfieg" target="_blank">
+        <box-icon type="logo" name="github"></box-icon>
+      </a>
+      <a href="https://www.linkedin.com/in/kathrynfieg/" target="_blank">
+        <box-icon type="logo" name="linkedin-square"></box-icon>
+      </a>
     </div>
   </nav>
 </template>
