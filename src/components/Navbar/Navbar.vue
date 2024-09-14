@@ -11,18 +11,18 @@ function toggleMenu() {
 <template>
   <nav class="navbar">
     <div class="navbar_logo">
-      <span>Fieg.dev</span>
+      <RouterLink to="/">Fieg.dev</RouterLink>
     </div>
     <button class="navbar_toggle" @click="toggleMenu">☰</button>
     <div :class="['navbar_links', { 'is-active': isMenuOpen }]">
-      <a href="#about">About</a>
-      <a href="#projects">Projects</a>
-      <a href="#blog">Blog</a>
+      <RouterLink to="/about">About</RouterLink>
+      <RouterLink to="/projects">Projects</RouterLink>
+      <RouterLink to="/blog">Blog</RouterLink>
       <a href="https://github.com/kathrynfieg" target="_blank">
-        <box-icon type="logo" name="github"></box-icon>
+        <box-icon type="logo" name="github" />
       </a>
       <a href="https://www.linkedin.com/in/kathrynfieg/" target="_blank">
-        <box-icon type="logo" name="linkedin-square"></box-icon>
+        <box-icon type="logo" name="linkedin-square" />
       </a>
     </div>
   </nav>
