@@ -29,7 +29,7 @@ function toggleMenu() {
   align-items: center;
   padding: 1rem;
   position: relative;
-  border-bottom: 1px solid black;
+  border-bottom: 2px solid black;
 }
 
 .navbar_logo span {

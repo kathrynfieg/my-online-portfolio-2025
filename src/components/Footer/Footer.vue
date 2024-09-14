@@ -1,6 +1,6 @@
 <template>
   <footer class="footer">
-    <p>kathrynfieg@gmail.com | 0448800340</p>
+    <p>kathrynfieg@gmail.com | +61 448 8003 40</p>
   </footer>
 </template>
 
@@ -11,11 +11,11 @@
   align-items: center;
   padding: 1rem;
   font-size: 0.8rem;
-  position: fixed;
   bottom: 0;
   width: 100%;
   text-align: center;
-  background-color: white;
+  background-color: black;
+  color: white;
 }
 
 .footer p {
