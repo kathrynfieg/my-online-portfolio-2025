@@ -25,7 +25,8 @@ import { Navbar, Footer } from '@/components';
   flex-direction: column;
   text-align: left;
   align-items: center;
-  justify-content: center; /* remove to not have everything in the middle */
+  /* remove to not have everything in the middle */
+  justify-content: center;
   text-align: left;
 }
 </style>

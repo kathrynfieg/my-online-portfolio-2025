@@ -45,7 +45,7 @@ function toggleMenu() {
 
 .navbar_links {
   display: flex;
-  gap: 1rem;
+  gap: 1.5rem;
 }
 
 .navbar_links a {
