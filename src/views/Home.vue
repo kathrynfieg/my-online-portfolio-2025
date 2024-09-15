@@ -19,9 +19,14 @@ h1 {
   line-height: normal;
 }
 
+p {
+  font-size: 1.5rem;
+}
+
 .home-screen h1,
 .home-screen p {
   margin: 0;
+  width: 100%;
 }
 
 .role {

@@ -11,7 +11,7 @@ function toggleMenu() {
 <template>
   <nav class="navbar">
     <div class="navbar_logo">
-      <RouterLink to="/">Fieg.dev</RouterLink>
+      <RouterLink to="/"><h1 class="texty">kat.fieg</h1></RouterLink>
     </div>
     <button class="navbar_toggle" @click="toggleMenu">☰</button>
     <div :class="['navbar_links', { 'is-active': isMenuOpen }]">
@@ -29,6 +29,18 @@ function toggleMenu() {
 </template>
 
 <style scoped>
+.texty {
+  /* background-color: aquamarine; */
+  text-decoration: none;
+  color: black;
+}
+
+.texty a {
+  /* background-color: aquamarine; */
+  text-decoration: none;
+  color: black;
+}
+
 .navbar {
   display: flex;
   justify-content: space-between;
@@ -80,7 +92,7 @@ function toggleMenu() {
     right: 0;
     width: 100%;
     padding: 1rem;
-    border-bottom: 1px solid;
+    border-bottom: 2px solid;
     background-color: white;
   }
 

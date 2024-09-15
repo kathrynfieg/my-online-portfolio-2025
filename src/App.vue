@@ -1,4 +1,15 @@
 <script setup lang="ts">
+/**
+ * TODO
+ * - reset tmp head
+ * - tidy styles
+ * - add global styles for header (desktop and mobile)
+ * - add global styles for container margins (desktop and mobile)
+ * - components:
+ *    - button
+ *    - project card
+ *    - chip
+ */
 import { Navbar, Footer } from '@/components';
 </script>
 
