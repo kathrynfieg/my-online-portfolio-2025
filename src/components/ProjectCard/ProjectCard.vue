@@ -7,18 +7,28 @@ import { Chip } from "@/components";
     <!-- <div class="project-image">IMG</div> -->
     <div class="me-pic-div"></div>
     <div>
-      <!-- <data value=""></data> -->
-      <div style="font-weight: 600; font-size: larger">Project Name</div>
       <div>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-        tempor incididunt ut labore et dolore magna aliqua.
-      </div>
-      <br />
-      <div>Tech stack:</div>
-      <div style="display: flex; gap: 0.3rem">
-        <Chip label="Vue" />
-        <Chip label="typescript" />
-        <Chip label="storybook" />
+        <div style="display: flex; flex-direction: column; line-height: normal">
+          <div style="font-size: small; color: gray">Project Name</div>
+          <div style="font-weight: 600; font-size: larger">
+            PupSpots Adelaide
+          </div>
+        </div>
+        <br />
+        <div style="font-size: small; color: gray; line-height: normal">
+          Description
+        </div>
+        <div>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        </div>
+        <br />
+        <div style="font-size: small; color: gray">Tech used</div>
+        <div style="display: flex; gap: 0.3rem">
+          <Chip label="Vue" />
+          <Chip label="typescript" />
+          <Chip label="storybook" />
+        </div>
       </div>
 
       <br />
