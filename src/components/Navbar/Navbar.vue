@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { ref } from 'vue';
+import { ref } from "vue";
 
 const isMenuOpen = ref(false);
 
@@ -9,26 +9,36 @@ function toggleMenu() {
 </script>
 
 <template>
-  <nav class="navbar">
-    <div class="navbar_logo">
-      <RouterLink to="/"><h1 class="texty">kat.fieg</h1></RouterLink>
-    </div>
-    <button class="navbar_toggle" @click="toggleMenu">☰</button>
-    <div :class="['navbar_links', { 'is-active': isMenuOpen }]">
-      <RouterLink to="/about">About</RouterLink>
-      <RouterLink to="/projects">Projects</RouterLink>
-      <RouterLink to="/blog">Blog</RouterLink>
-      <a href="https://github.com/kathrynfieg" target="_blank">
-        <box-icon type="logo" name="github" />
-      </a>
-      <a href="https://www.linkedin.com/in/kathrynfieg/" target="_blank">
-        <box-icon type="logo" name="linkedin-square" />
-      </a>
-    </div>
-  </nav>
+  <div class="navbar-wrapper">
+    <nav class="navbar">
+      <div class="navbar_logo">
+        <RouterLink to="/"><h1 class="texty">kat.fieg</h1></RouterLink>
+      </div>
+      <button class="navbar_toggle" @click="toggleMenu">
+        <box-icon name="menu"></box-icon>
+      </button>
+      <div :class="['navbar_links', { 'is-active': isMenuOpen }]">
+        <RouterLink to="/about">About</RouterLink>
+        <RouterLink to="/projects">Projects</RouterLink>
+        <RouterLink to="/blog">Blog</RouterLink>
+        <a href="https://github.com/kathrynfieg" target="_blank">
+          <box-icon type="logo" name="github" />
+        </a>
+        <a href="https://www.linkedin.com/in/kathrynfieg/" target="_blank">
+          <box-icon type="logo" name="linkedin-square" />
+        </a>
+      </div>
+    </nav>
+  </div>
 </template>
 
 <style scoped>
+.navbar-wrapper {
+  width: 100vw;
+  position: fixed;
+  background-color: white;
+}
+
 .texty {
   /* background-color: aquamarine; */
   text-decoration: none;

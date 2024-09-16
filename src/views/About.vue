@@ -1,33 +1,33 @@
 <script setup lang="ts">
-import { Chip } from '@/components';
+import { Chip } from "@/components";
 
 const experiences = [
-  'Vue',
-  'React',
-  'Remix',
-  'Javascript',
-  'Typescript',
-  'Storybook',
-  'Tailwind CSS',
-  'Vanilla CSS',
-  'SCSS',
-  'SASS',
-  'Vuetify',
-  'Unit testing',
-  'React Testing library',
-  'Vitest',
-  'W3C Accessibility',
-  'Localisation (i18n)',
-  'Mongo.DB',
-  'Express.js',
-  'Git',
-  'Agile',
+  "Vue",
+  "React",
+  "Remix",
+  "Javascript",
+  "Typescript",
+  "Storybook",
+  "Tailwind CSS",
+  "Vanilla CSS",
+  "SCSS",
+  "SASS",
+  "Vuetify",
+  "Unit testing",
+  "React Testing library",
+  "Vitest",
+  "W3C Accessibility",
+  "Localisation (i18n)",
+  "Mongo.DB",
+  "Express.js",
+  "Git",
+  "Agile",
 ];
 </script>
 
 <template>
   <div class="about-screen container">
-    <p class="header">About Me</p>
+    <p class="header">About Me<span class="blinking-cursor">|</span></p>
     <div class="content">
       <h1>Frontend Developer of 3 years specialising in Vue</h1>
       <div class="short-me">
@@ -63,10 +63,20 @@ const experiences = [
 <style scoped>
 .about-screen {
   padding: 3rem 1rem;
+  padding-top: 7rem;
   width: 100%;
   display: flex;
   flex-direction: column;
   gap: 2rem;
+}
+
+.blinking-cursor {
+  font-weight: 300;
+  font-size: 2rem;
+  padding-left: 0.5rem;
+  color: #2e3d48;
+  display: inline-block;
+  animation: blink 1s step-end infinite;
 }
 
 .header {
@@ -85,7 +95,7 @@ h1 {
 }
 
 .me-pic-div {
-  background-image: url('../assets/me2.JPG');
+  background-image: url("../assets/me2.JPG");
   height: 400px;
   width: 100%;
   background-size: cover;
@@ -117,7 +127,7 @@ button {
   width: 10rem;
   margin-top: 2rem;
   background-color: white;
-  font-family: 'IBM Plex Mono', monospace;
+  font-family: "IBM Plex Mono", monospace;
   align-self: flex-end;
 }
 
@@ -136,6 +146,7 @@ button:hover {
 
   .about-screen {
     padding: 2rem 1rem;
+    padding-top: 6rem;
   }
 
   .content {
@@ -151,6 +162,16 @@ button:hover {
   button {
     align-self: auto;
     width: 100%;
+  }
+}
+
+@keyframes blink {
+  from,
+  to {
+    color: transparent;
+  }
+  50% {
+    color: black;
   }
 }
 </style>
