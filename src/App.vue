@@ -10,7 +10,7 @@
  *    - project card
  *    - chip
  */
-import { Navbar, Footer } from '@/components';
+import { Navbar, Footer } from "@/components";
 </script>
 
 <template>
@@ -27,7 +27,7 @@ import { Navbar, Footer } from '@/components';
 .main-wrapper {
   display: flex;
   flex-direction: column;
-  min-height: 100vh;
+  min-height: 100dvh;
 }
 
 .main {
