@@ -36,10 +36,43 @@ body {
   padding-right: 20px;
 }
 
+.small-header {
+  font-size: 1.5rem;
+}
+
+.big-header {
+  font-size: 3.5rem;
+  line-height: 4rem;
+}
+
+.blinking-cursor {
+  font-weight: 300;
+  font-size: 2rem;
+  padding-left: 0.5rem;
+  color: #2e3d48;
+  display: inline-block;
+  animation: blink 1s step-end infinite;
+}
+
 /* Mobile styles */
 @media (max-width: 768px) {
   .container {
     padding-left: 10px;
     padding-right: 10px;
+  }
+
+  .big-header {
+    font-size: 3rem;
+    line-height: 3.5rem;
+  }
+}
+
+@keyframes blink {
+  from,
+  to {
+    color: transparent;
+  }
+  50% {
+    color: black;
   }
 }
