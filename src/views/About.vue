@@ -26,7 +26,7 @@ const experiences = [
 </script>
 
 <template>
-  <div class="about-screen container">
+  <div class="container container-spacing">
     <h1 class="small-header">About Me<span class="blinking-cursor">|</span></h1>
     <div class="flex flex-col gap-6 md:gap-20 md:flex-row">
       <h1 class="big-header">
@@ -63,15 +63,6 @@ const experiences = [
 </template>
 
 <style scoped>
-.about-screen {
-  padding: 3rem 1rem;
-  padding-top: 7rem;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
-}
-
 .me-photo {
   background-image: url('../assets/me.JPG');
   height: 400px;
@@ -99,11 +90,6 @@ button:hover {
 @media (max-width: 768px) {
   .me-photo {
     height: 200px;
-  }
-
-  .about-screen {
-    padding: 2rem 1rem;
-    padding-top: 6rem;
   }
 
   button {

@@ -3,7 +3,7 @@ import { ProjectCard } from '@/components';
 </script>
 
 <template>
-  <div class="about-screen container">
+  <div class="container container-spacing">
     <h1 class="small-header">
       My Projects<span class="blinking-cursor">|</span>
     </h1>
@@ -37,15 +37,6 @@ import { ProjectCard } from '@/components';
 </template>
 
 <style scoped>
-.about-screen {
-  padding: 3rem 1rem;
-  padding-top: 7rem;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
-}
-
 button {
   cursor: pointer;
   border: 2px solid;
@@ -63,11 +54,6 @@ button:hover {
 }
 
 @media (max-width: 768px) {
-  .about-screen {
-    padding: 2rem 1rem;
-    padding-top: 6rem;
-  }
-
   button {
     align-self: auto;
     width: 100%;

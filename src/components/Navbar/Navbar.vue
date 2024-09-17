@@ -12,8 +12,8 @@ function toggleMenu() {
   <div class="w-dvw fixed bg-white">
     <nav class="navbar">
       <RouterLink to="/"
-        ><h1 class="small-header font-bold">kat.fieg</h1></RouterLink
-      >
+        ><h1 class="small-header font-bold">kat.fieg</h1>
+      </RouterLink>
       <button class="navbar-menu" @click="toggleMenu">
         <box-icon name="menu"></box-icon>
       </button>

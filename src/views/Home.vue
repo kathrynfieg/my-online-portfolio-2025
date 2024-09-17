@@ -3,7 +3,7 @@ import router from '@/router';
 </script>
 
 <template>
-  <div class="home-screen container">
+  <div class="container container-spacing">
     <p class="small-header">Hello! I'm Kat.</p>
     <h1 class="big-header">
       Inspired <span class="role">frontend developer</span>, building web
