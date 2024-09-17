@@ -1,5 +1,6 @@
 <script setup lang="ts">
-import { Chip } from '@/components';
+import router from '@/router';
+import { Button, Chip } from '@/components';
 
 const experiences = [
   'Vue',
@@ -32,12 +33,18 @@ const experiences = [
       <h1 class="big-header">
         Frontend Developer of 3 years specialising in Vue
       </h1>
-      <div class="flex flex-col justify-between">
+      <div class="flex flex-col justify-between gap-4">
         <p>
           I'm Kat, a Frontend developer based in Adelaide, Australia and I focus
           on web applications built with vue.js
         </p>
-        <button>My Projects</button>
+        <Button
+          variant="secondary"
+          class="md:w-fit md:self-end"
+          @click="router.push('/projects')"
+        >
+          My Projects
+        </Button>
       </div>
     </div>
     <div class="me-photo"></div>
@@ -71,17 +78,6 @@ const experiences = [
   border-radius: 1rem;
 }
 
-button {
-  cursor: pointer;
-  border: 2px solid;
-  padding: 0.5rem;
-  width: 10rem;
-  margin-top: 2rem;
-  background-color: white;
-  font-family: 'IBM Plex Mono', monospace;
-  align-self: flex-end;
-}
-
 button:hover {
   background-color: cadetblue;
   color: white;
@@ -90,11 +86,6 @@ button:hover {
 @media (max-width: 768px) {
   .me-photo {
     height: 200px;
-  }
-
-  button {
-    align-self: auto;
-    width: 100%;
   }
 }
 </style>

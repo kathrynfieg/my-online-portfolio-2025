@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { Chip } from '@/components';
+import { Button, Chip } from '@/components';
 </script>
 
 <template>
@@ -35,8 +35,8 @@ import { Chip } from '@/components';
 
       <!-- buttons -->
       <div class="flex gap-2 mt-5">
-        <button>Live demo</button>
-        <button>Source code</button>
+        <Button>Live demo</Button>
+        <Button>Source code</Button>
       </div>
     </div>
   </div>
@@ -51,15 +51,6 @@ import { Chip } from '@/components';
   width: 100%;
   background-size: cover;
   border-radius: 1rem;
-}
-
-button {
-  border: 1px solid;
-  padding: 0.5rem;
-  width: 8rem;
-  background-color: black;
-  color: white;
-  font-family: 'IBM Plex Mono', monospace;
 }
 
 @media (max-width: 768px) {

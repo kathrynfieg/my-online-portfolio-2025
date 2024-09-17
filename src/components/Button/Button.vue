@@ -45,7 +45,8 @@ defineProps({
 .button {
   transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
     border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
-  padding: 0.5rem 1rem;
+  padding: 0.3rem 1rem;
+  font-family: 'IBM Plex Mono', monospace;
 }
 
 a.button {

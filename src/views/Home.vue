@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import router from '@/router';
+import { Button } from '@/components';
 </script>
 
 <template>
@@ -9,7 +10,9 @@ import router from '@/router';
       Inspired <span class="role">frontend developer</span>, building web
       applications with heart.<span class="blinking-cursor">|</span>
     </h1>
-    <button @click="router.push('/projects')">My Projects</button>
+    <Button variant="secondary" @click="router.push('/projects')" class="w-40">
+      My Projects
+    </Button>
   </div>
 </template>
 
@@ -24,21 +27,6 @@ import router from '@/router';
 .blinking-cursor {
   font-weight: 300;
   font-size: 4rem;
-}
-
-button {
-  cursor: pointer;
-  border: 2px solid;
-  padding: 0.5rem;
-  width: 10rem;
-  margin-top: 2rem;
-  background-color: white;
-  font-family: 'IBM Plex Mono', monospace;
-}
-
-button:hover {
-  background-color: cadetblue;
-  color: white;
 }
 
 @media (max-width: 768px) {
