@@ -1,49 +1,72 @@
+<script setup lang="ts">
+import { Chip } from '@/components';
+</script>
+
 <template>
-  <div class="project-card">
-    <div class="project-image">IMG</div>
-    <div>
-      <div>Project Name</div>
-      <div>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-        tempor incididunt ut labore et dolore magna aliqua.
+  <div class="flex flex-col p-2 gap-4 md:flex-row">
+    <div class="me-photo"></div>
+    <div class="flex flex-col justify-between">
+      <div class="flex flex-col gap-4">
+        <!-- Project name -->
+        <div>
+          <div class="text-sm text-gray-500">Project Name</div>
+          <div class="font-semibold text-lg">PupSpots Adelaide</div>
+        </div>
+
+        <!-- Project description -->
+        <div>
+          <div class="text-sm text-gray-500">Description</div>
+          <div>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          </div>
+        </div>
+
+        <!-- Tech used -->
+        <div>
+          <div class="text-sm text-gray-500">Tech used</div>
+          <div style="display: flex; gap: 0.3rem">
+            <Chip label="Vue" />
+            <Chip label="typescript" />
+            <Chip label="storybook" />
+          </div>
+        </div>
       </div>
-      <br />
-      <div>Tech stack: Vue, typescript, storybook</div>
-      <br />
-      <div class="buttons">
-        <button>Live Site</button>
-        <button>Code</button>
+
+      <!-- buttons -->
+      <div class="flex gap-2 mt-5">
+        <button>Live demo</button>
+        <button>Source code</button>
       </div>
     </div>
   </div>
+  <br />
+  <hr />
 </template>
 
 <style scoped>
-.project-card {
-  /* background-color: blueviolet; */
+.me-photo {
+  background-image: url('../../assets/me.JPG');
+  height: 400px;
   width: 100%;
-  border: 1px solid;
-  padding: 1rem;
-  display: flex;
-  gap: 1rem;
+  background-size: cover;
+  border-radius: 1rem;
 }
 
-.project-image {
-  width: 15rem !important;
-  border: 1px solid;
-}
-
-.buttons {
-  display: flex;
-  gap: 0.5rem;
-}
-
-.buttons button {
+button {
   border: 1px solid;
   padding: 0.5rem;
   width: 8rem;
   background-color: black;
   color: white;
   font-family: 'IBM Plex Mono', monospace;
+}
+
+@media (max-width: 768px) {
+  .me-photo {
+    height: 250px;
+    background-size: cover;
+    border-radius: 1rem;
+  }
 }
 </style>

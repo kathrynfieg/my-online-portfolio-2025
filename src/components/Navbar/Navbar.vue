@@ -9,23 +9,27 @@ function toggleMenu() {
 </script>
 
 <template>
-  <nav class="navbar">
-    <div class="navbar_logo">
-      <RouterLink to="/">Fieg.dev</RouterLink>
-    </div>
-    <button class="navbar_toggle" @click="toggleMenu">☰</button>
-    <div :class="['navbar_links', { 'is-active': isMenuOpen }]">
-      <RouterLink to="/about">About</RouterLink>
-      <RouterLink to="/projects">Projects</RouterLink>
-      <RouterLink to="/blog">Blog</RouterLink>
-      <a href="https://github.com/kathrynfieg" target="_blank">
-        <box-icon type="logo" name="github" />
-      </a>
-      <a href="https://www.linkedin.com/in/kathrynfieg/" target="_blank">
-        <box-icon type="logo" name="linkedin-square" />
-      </a>
-    </div>
-  </nav>
+  <div class="w-dvw fixed bg-white">
+    <nav class="navbar">
+      <RouterLink to="/"
+        ><h1 class="small-header font-bold">kat.fieg</h1></RouterLink
+      >
+      <button class="navbar-menu" @click="toggleMenu">
+        <box-icon name="menu"></box-icon>
+      </button>
+      <div :class="['navbar-links', { 'is-active': isMenuOpen }]">
+        <RouterLink to="/about">About</RouterLink>
+        <RouterLink to="/projects">Projects</RouterLink>
+        <RouterLink to="/blog">Blog</RouterLink>
+        <a href="https://github.com/kathrynfieg" target="_blank">
+          <box-icon type="logo" name="github" />
+        </a>
+        <a href="https://www.linkedin.com/in/kathrynfieg/" target="_blank">
+          <box-icon type="logo" name="linkedin-square" />
+        </a>
+      </div>
+    </nav>
+  </div>
 </template>
 
 <style scoped>
@@ -38,40 +42,32 @@ function toggleMenu() {
   border-bottom: 2px solid black;
 }
 
-.navbar_logo span {
-  /* font-size: 1.5rem;
-  font-weight: bold; */
-}
-
-.navbar_links {
+.navbar-links {
   display: flex;
   gap: 1.5rem;
 }
 
-.navbar_links a {
+.navbar-links a {
   text-decoration: none;
   color: black;
 }
 
-.navbar_links a:hover {
+.navbar-links a:hover {
   text-decoration: underline;
 }
 
-.navbar_toggle {
+.navbar-menu {
   display: none;
-  font-size: 1.5rem;
-  background: none;
-  border: none;
-  cursor: pointer;
 }
 
 /* Responsive Styles */
 @media (max-width: 768px) {
-  .navbar_toggle {
+  .navbar-menu {
     display: block;
+    cursor: pointer;
   }
 
-  .navbar_links {
+  .navbar-links {
     display: none;
     flex-direction: column;
     gap: 1rem;
@@ -80,11 +76,11 @@ function toggleMenu() {
     right: 0;
     width: 100%;
     padding: 1rem;
-    border-bottom: 1px solid;
+    border-bottom: 2px solid;
     background-color: white;
   }
 
-  .navbar_links.is-active {
+  .navbar-links.is-active {
     display: flex;
   }
 }

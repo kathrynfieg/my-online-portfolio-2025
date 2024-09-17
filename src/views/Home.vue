@@ -4,8 +4,8 @@ import router from '@/router';
 
 <template>
   <div class="home-screen container">
-    <p>Hello! I'm Kat.</p>
-    <h1>
+    <p class="small-header">Hello! I'm Kat.</p>
+    <h1 class="big-header">
       Inspired <span class="role">frontend developer</span>, building web
       applications with heart.<span class="blinking-cursor">|</span>
     </h1>
@@ -14,16 +14,6 @@ import router from '@/router';
 </template>
 
 <style scoped>
-h1 {
-  font-size: 3.5rem;
-  line-height: normal;
-}
-
-.home-screen h1,
-.home-screen p {
-  margin: 0;
-}
-
 .role {
   background-color: black;
   padding-left: 0.5rem;
@@ -32,11 +22,8 @@ h1 {
 }
 
 .blinking-cursor {
-  font-weight: 500;
+  font-weight: 300;
   font-size: 4rem;
-  color: #2e3d48;
-  display: inline-block;
-  animation: blink 1s step-end infinite;
 }
 
 button {
@@ -55,22 +42,8 @@ button:hover {
 }
 
 @media (max-width: 768px) {
-  h1 {
-    font-size: 3rem;
-  }
-
   .blinking-cursor {
     font-size: 3rem;
-  }
-}
-
-@keyframes blink {
-  from,
-  to {
-    color: transparent;
-  }
-  50% {
-    color: black;
   }
 }
 </style>
