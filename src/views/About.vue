@@ -35,10 +35,10 @@ const experiences = [
       </h1>
       <div class="flex flex-col justify-between gap-4">
         <p>
-          I'm Kat, a Frontend developer based in Adelaide, Australia and I love
-          what I do. My journey in web development has been an exciting blend of
-          creativity and logic, and I'm always eager to learn new things and
-          take on new challenges.
+          I'm currently a full-time Frontend developer based in Adelaide,
+          Australia and I love what I do. My journey in web development has been
+          an exciting blend of creativity and logic, and I'm always eager to
+          learn new things and take on new challenges.
         </p>
         <Button
           variant="secondary"

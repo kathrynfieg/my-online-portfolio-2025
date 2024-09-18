@@ -1,4 +1,8 @@
 <script setup lang="ts">
+/**
+ * TODO
+ * - more on flex spacing specially for about header and projects
+ */
 import { Navbar, Footer } from '@/components';
 </script>
 
