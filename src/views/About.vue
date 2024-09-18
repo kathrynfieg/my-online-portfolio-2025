@@ -80,11 +80,6 @@ const experiences = [
   border-radius: 1rem;
 }
 
-button:hover {
-  background-color: cadetblue;
-  color: white;
-}
-
 @media (max-width: 768px) {
   .me-photo {
     height: 200px;
