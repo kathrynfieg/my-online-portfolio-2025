@@ -1,9 +1,10 @@
 <script setup lang="ts">
 import { ProjectCard } from '@/components';
 
-import photo from '@/assets/me.jpg';
-import handleit from '@/assets/handleit.png';
-import tafebuddy from '@/assets/tafebuddy.png';
+import tafebuddy from '@/assets/tafebuddy-square.png';
+import handleit from '@/assets/handleit-square.png';
+// import tafebuddy from '@/assets/tafebuddy-portrait.png';
+// import handleit from '@/assets/handleit-portrait.png';
 </script>
 
 <template>
@@ -30,44 +31,37 @@ import tafebuddy from '@/assets/tafebuddy.png';
       <!-- Project list -->
       <div class="flex flex-col gap-10">
         <ProjectCard
+          name="PupSpot Adelaide"
+          description="Website built for our family-owned cleaning business, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+          date="2024"
+          :tech="['Vue', 'Firebase', 'Typescript']"
+          :number="1"
+        />
+
+        <ProjectCard
           name="Handleit Cleaning Adelaide"
           description="Website built for our family-owned cleaning business, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-          :tech="['Webflow', 'BookingKoala integration']"
+          date="2024"
           liveLink="https://www.handleitcleaning.com.au/"
+          :tech="['Webflow', 'BookingKoala']"
           :photo="handleit"
-          :number="1"
+          :number="2"
         />
 
         <ProjectCard
           name="TafeBuddy"
           description="TAFE SA's Student Results View (SRV) app. elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-          :tech="['C#', 'XAML', 'SQL', 'MySQL']"
+          sourceCodeLink="https://github.com/kathrynfieg/TafeBuddy_SRV_App"
+          date="2020"
+          :tech="['UWP', 'C#', 'XAML', 'UI/UX', 'MySQL']"
           :photo="tafebuddy"
-          sourceCodeLink="https://github.com/kathrynfieg/TafeBuddy_SRV_App?tab=readme-ov-file#tafebuddy"
+          :number="3"
           :actions="[
             {
               label: 'Video walkthrough',
               link: 'https://www.youtube.com/watch?v=MSR6I0BNxks&ab_channel=KathrynFieg',
             },
           ]"
-          :number="2"
-        />
-
-        <ProjectCard
-          name="PupSpot Adelaide"
-          description="Website built for our family-owned cleaning business, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-          :tech="['Vue', 'Firebase', 'Typescript']"
-          liveLink="https://www.handleitcleaning.com.au/"
-          :photo="photo"
-          :number="3"
-        />
-
-        <ProjectCard
-          name="PupSpot Adelaide"
-          description="Website built for our family-owned cleaning business, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-          :tech="['Vue', 'Firebase', 'Typescript']"
-          liveLink="https://www.handleitcleaning.com.au/"
-          :number="4"
         />
 
         <!-- See more link -->

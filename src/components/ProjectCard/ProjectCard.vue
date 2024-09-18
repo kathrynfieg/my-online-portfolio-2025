@@ -19,6 +19,10 @@ defineProps({
     type: String,
     default: '',
   },
+  date: {
+    type: String,
+    default: '',
+  },
   tech: {
     type: Array<string>,
     default: [],
@@ -43,10 +47,8 @@ defineProps({
 </script>
 
 <template>
-  <div
-    class="flex flex-col p-3 gap-4 rounded-lg md:flex-row bg-white shadow-sm border md:hover:shadow-lg"
-  >
-    <!-- Project image -->
+  <div class="flex flex-col p-3 gap-4 rounded-lg md:flex-row bg-white border">
+    <!-- Project image desktop -->
     <div class="img-wrapper hidden md:block">
       <img v-if="photo" :src="photo" />
     </div>
@@ -56,22 +58,22 @@ defineProps({
         <!-- Project name -->
         <div class="flex items-start justify-between">
           <div>
-            <div class="text-sm text-gray-500">Project Name</div>
             <div class="font-semibold text-lg">{{ name }}</div>
+            <div class="text-sm text-gray-400">{{ date }}</div>
           </div>
           <div v-if="number" class="px-3 bg-black text-white font-bold">
             {{ number }}
           </div>
         </div>
 
-        <!-- Project image -->
+        <!-- Project image mobile -->
         <div class="img-wrapper md:hidden">
           <img v-if="photo" :src="photo" />
         </div>
 
         <!-- Project description -->
         <div>
-          <div class="text-sm text-gray-500">Description</div>
+          <!-- <div class="text-sm text-gray-400">Description</div> -->
           <ReadMore :content="description" :lines="3"></ReadMore>
         </div>
       </div>
@@ -111,7 +113,7 @@ defineProps({
   background-color: #fafafa;
   /* border: 2px black solid; */
   width: 250px !important;
-  height: 350px !important;
+  height: 250px !important;
   flex-shrink: 0;
 }
 
