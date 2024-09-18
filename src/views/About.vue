@@ -73,7 +73,7 @@ const experiences = [
 
 <style scoped>
 .me-photo {
-  background-image: url('../assets/me.JPG');
+  background-image: url('@/assets/me.jpg');
   height: 400px;
   width: 100%;
   background-size: cover;
