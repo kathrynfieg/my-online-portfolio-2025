@@ -35,68 +35,88 @@ defineProps({
     type: Array<IProjectCardActions>,
     default: [],
   },
+  number: {
+    type: Number,
+    default: null,
+  },
 });
 </script>
 
 <template>
-  <div class="flex flex-col p-2 gap-4 md:flex-row">
-    <div class="me-photo" :style="{ backgroundImage: `url(${photo})` }"></div>
+  <div class="flex flex-col p-3 gap-4 rounded-lg md:flex-row bg-white">
+    <div class="img-wrapper"><img v-if="photo" :src="photo" /></div>
     <div class="flex flex-col justify-between">
       <div class="flex flex-col gap-4">
         <!-- Project name -->
-        <div>
-          <div class="text-sm text-gray-500">Project Name</div>
-          <div class="font-semibold text-lg">{{ name }}</div>
+        <div class="flex items-start justify-between">
+          <div>
+            <div class="text-sm text-gray-500">Project Name</div>
+            <div class="font-semibold text-lg">{{ name }}</div>
+          </div>
+          <div v-if="number" class="px-3 bg-black text-white font-bold">
+            {{ number }}
+          </div>
         </div>
 
         <!-- Project description -->
         <div>
           <div class="text-sm text-gray-500">Description</div>
-          <ReadMore :lines="3">{{ description }}</ReadMore>
-        </div>
-
-        <!-- Tech used -->
-        <div>
-          <div class="text-sm text-gray-500">Tech used</div>
-          <div style="display: flex; gap: 0.3rem">
-            <Chip v-for="(tech, index) in tech" :label="tech" :key="index" />
-          </div>
+          <ReadMore :content="description" :lines="3"></ReadMore>
         </div>
       </div>
 
-      <!-- buttons -->
-      <div class="flex gap-2 mt-5">
-        <Button v-if="liveLink" :href="liveLink">Live demo</Button>
-        <Button v-if="sourceCodeLink" :href="sourceCodeLink">
-          Source code
-        </Button>
-        <Button
-          v-for="(action, index) in actions"
-          :key="index"
-          :href="action.link"
-          >{{ action.label }}
-        </Button>
+      <div class="flex flex-col gap-4">
+        <!-- Tech used -->
+        <div class="flex gap-[0.3rem] flex-wrap items-center">
+          <Chip
+            v-for="(tech, index) in tech"
+            :label="tech"
+            :key="index"
+            size="sm"
+          />
+        </div>
+
+        <!-- actions -->
+        <div class="flex gap-2 flex-wrap items-center">
+          <Button size="sm" v-if="liveLink" :href="liveLink">Live demo</Button>
+          <Button size="sm" v-if="sourceCodeLink" :href="sourceCodeLink">
+            Source code
+          </Button>
+          <Button
+            size="sm"
+            v-for="(action, index) in actions"
+            :key="index"
+            :href="action.link"
+            >{{ action.label }}
+          </Button>
+        </div>
       </div>
     </div>
   </div>
-  <br />
-  <hr />
 </template>
 
 <style scoped>
-.me-photo {
-  /* background-image: url('../../assets/me.JPG'); */
-  height: 400px;
+.img-wrapper {
+  background-color: #fafafa;
+  border: 2px black solid;
+  width: 250px !important;
+  height: 350px !important;
+  flex-shrink: 0;
+}
+
+img {
+  font-size: 0;
+  object-fit: cover;
+  height: 100%;
   width: 100%;
-  background-size: cover;
-  /* border-radius: 1rem; */
+  object-position: top;
 }
 
 @media (max-width: 768px) {
-  .me-photo {
-    height: 250px;
-    background-size: cover;
-    border-radius: 1rem;
+  .img-wrapper {
+    width: 100% !important;
+    height: 250px !important;
+    flex-shrink: 0;
   }
 }
 </style>
