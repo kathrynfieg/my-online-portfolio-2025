@@ -6,7 +6,7 @@
 import { PropType } from 'vue';
 
 export type IButtonVariant = 'primary' | 'secondary';
-export type IButtonSize = 'default' | 'lg';
+export type IButtonSize = 'default' | 'lg' | 'sm';
 
 defineProps({
   variant: {
@@ -34,7 +34,15 @@ defineProps({
     :href="href"
     v-bind="$attrs"
     class="button border-2"
-    :class="[`button_${variant}`, `button-${size}`]"
+    :class="[
+      `button-${size}`,
+      {
+        'bg-black text-white border border-black hover:bg-white hover:text-black':
+          variant === 'primary',
+        'bg-white text-black border border-black hover:bg-black hover:text-white':
+          variant === 'secondary',
+      },
+    ]"
     :disabled="disabled"
   >
     <slot></slot>
@@ -59,28 +67,9 @@ a.button {
   gap: 1rem;
 }
 
-.button_primary {
-  background: black;
-  color: white;
-  border-color: black;
-}
-
-.button_primary:hover {
-  background: white;
-  color: black;
-  border-color: black;
-}
-
-.button_secondary {
-  background: white;
-  color: black;
-  border-color: black;
-}
-
-.button_secondary:hover {
-  background: black;
-  color: white;
-  border-color: black;
+.button-sm {
+  padding: 0.2rem 1rem;
+  font-size: smaller;
 }
 
 .button:disabled {
