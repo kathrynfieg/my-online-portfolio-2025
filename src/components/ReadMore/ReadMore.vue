@@ -60,7 +60,7 @@ watch(
   <slot v-bind="{ toggle, expanded, canExpand }">
     <button
       v-if="canExpand"
-      class="bg-none mt-3 p-0 border-none cursor-pointer transition-colors duration-150 underline text-sm"
+      class="bg-none mt-2 p-0 border-none cursor-pointer transition-colors duration-150 underline text-sm"
       @click="toggle"
     >
       {{ expanded ? 'Read less' : 'Read more' }}
