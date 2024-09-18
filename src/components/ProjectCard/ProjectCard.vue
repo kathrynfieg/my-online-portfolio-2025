@@ -44,7 +44,7 @@ defineProps({
 
 <template>
   <div
-    class="flex flex-col p-3 gap-4 rounded-lg md:flex-row bg-white shadow-sm"
+    class="flex flex-col p-3 gap-4 rounded-lg md:flex-row bg-white shadow-sm border md:hover:shadow-lg"
   >
     <!-- Project image -->
     <div class="img-wrapper hidden md:block">
