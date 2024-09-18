@@ -43,9 +43,15 @@ defineProps({
 </script>
 
 <template>
-  <div class="flex flex-col p-3 gap-4 rounded-lg md:flex-row bg-white">
-    <div class="img-wrapper"><img v-if="photo" :src="photo" /></div>
-    <div class="flex flex-col justify-between">
+  <div
+    class="flex flex-col p-3 gap-4 rounded-lg md:flex-row bg-white shadow-sm"
+  >
+    <!-- Project image -->
+    <div class="img-wrapper hidden md:block">
+      <img v-if="photo" :src="photo" />
+    </div>
+
+    <div class="flex flex-col justify-between gap-8">
       <div class="flex flex-col gap-4">
         <!-- Project name -->
         <div class="flex items-start justify-between">
@@ -56,6 +62,11 @@ defineProps({
           <div v-if="number" class="px-3 bg-black text-white font-bold">
             {{ number }}
           </div>
+        </div>
+
+        <!-- Project image -->
+        <div class="img-wrapper md:hidden">
+          <img v-if="photo" :src="photo" />
         </div>
 
         <!-- Project description -->
@@ -98,7 +109,7 @@ defineProps({
 <style scoped>
 .img-wrapper {
   background-color: #fafafa;
-  border: 2px black solid;
+  /* border: 2px black solid; */
   width: 250px !important;
   height: 350px !important;
   flex-shrink: 0;
