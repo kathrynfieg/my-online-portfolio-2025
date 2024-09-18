@@ -28,9 +28,11 @@ const experiences = [
 
 <template>
   <div class="container container-spacing">
-    <h1 class="small-header">About Me<span class="blinking-cursor">|</span></h1>
+    <h1 class="small-header">
+      About Me<span class="blinking-cursor-primary">|</span>
+    </h1>
     <div class="flex flex-col gap-6 md:gap-20 md:flex-row">
-      <h1 class="big-header">
+      <h1 class="big-header text-traveler-blue">
         Frontend Developer of 3 years specialising in Vue
       </h1>
       <div class="flex flex-col justify-between gap-4">
@@ -41,7 +43,7 @@ const experiences = [
           learn new things and take on new challenges.
         </p>
         <Button
-          variant="secondary"
+          variant="green-primary"
           class="md:w-fit md:self-end"
           @click="router.push('/projects')"
         >
@@ -60,7 +62,9 @@ const experiences = [
       est laborum.
     </p>
 
-    <h1 class="small-header">What i've worked with</h1>
+    <h1 class="small-header text-traveler-green-primary">
+      What i've worked with
+    </h1>
     <div class="flex flex-wrap gap-2">
       <Chip
         v-for="experience in experiences"

@@ -5,7 +5,11 @@
  */
 import { PropType } from 'vue';
 
-export type IButtonVariant = 'primary' | 'secondary';
+export type IButtonVariant =
+  | 'primary'
+  | 'secondary'
+  | 'green-primary'
+  | 'green-secondary';
 export type IButtonSize = 'default' | 'lg' | 'sm';
 
 defineProps({
@@ -40,6 +44,10 @@ defineProps({
         'bg-black text-white border border-black hover:bg-white hover:text-black':
           variant === 'primary',
         'bg-white text-black border border-black hover:bg-black hover:text-white':
+          variant === 'secondary',
+        ' bg-traveler-green-primary text-white border border-traveler-green-primary hover:bg-white hover:text-traveler-green-primary':
+          variant === 'green-primary',
+        'bg-white text-traveler-green-primary border border-traveler-green-primary hover:bg-traveler-green-primary hover:text-white':
           variant === 'secondary',
       },
     ]"

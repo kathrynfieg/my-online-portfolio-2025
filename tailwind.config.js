@@ -15,6 +15,10 @@ export default {
         'pastel-brown': '#874F41',
         'pastel-cyan': '#90AEAD',
         'pastel-cream': '#FBE9D0',
+
+        'traveler-green-primary': '#77926a',
+        'traveler-blue': '#20282f',
+        'traveler-brown-dark': '#464036',
       },
     },
   },

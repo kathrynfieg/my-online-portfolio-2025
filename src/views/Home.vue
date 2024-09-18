@@ -5,10 +5,14 @@ import { Button } from '@/components';
 
 <template>
   <div class="container container-spacing">
-    <p class="small-header">Hello! I'm Kat.</p>
-    <h1 class="big-header">
-      Inspired <span class="role">frontend developer</span>, building web
-      applications with heart.<span class="blinking-cursor">|</span>
+    <p class="small-header text-traveler-brown-dark">Hello! I'm Kat.</p>
+    <h1 class="big-header text-traveler-blue">
+      Inspired
+      <span class="bg-traveler-green-primary text-white"
+        >frontend developer</span
+      >, building web applications with heart.<span class="blinking-cursor"
+        >|</span
+      >
     </h1>
     <Button variant="secondary" @click="router.push('/projects')" class="w-40">
       My Projects

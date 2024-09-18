@@ -51,9 +51,14 @@ defineProps({
         <div class="flex items-start justify-between">
           <div>
             <div class="text-sm text-gray-500">Project Name</div>
-            <div class="font-semibold text-lg">{{ name }}</div>
+            <div class="font-semibold text-lg text-traveler-blue">
+              {{ name }}
+            </div>
           </div>
-          <div v-if="number" class="px-3 bg-black text-white font-bold">
+          <div
+            v-if="number"
+            class="px-3 bg-traveler-brown-dark text-white font-bold"
+          >
             {{ number }}
           </div>
         </div>
@@ -78,11 +83,23 @@ defineProps({
 
         <!-- actions -->
         <div class="flex gap-2 flex-wrap items-center">
-          <Button size="sm" v-if="liveLink" :href="liveLink">Live demo</Button>
-          <Button size="sm" v-if="sourceCodeLink" :href="sourceCodeLink">
+          <Button
+            variant="green-primary"
+            size="sm"
+            v-if="liveLink"
+            :href="liveLink"
+            >Live demo</Button
+          >
+          <Button
+            variant="green-primary"
+            size="sm"
+            v-if="sourceCodeLink"
+            :href="sourceCodeLink"
+          >
             Source code
           </Button>
           <Button
+            variant="green-primary"
             size="sm"
             v-for="(action, index) in actions"
             :key="index"

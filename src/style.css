@@ -66,6 +66,15 @@ body {
   animation: blink 1s step-end infinite;
 }
 
+.blinking-cursor-primary {
+  font-weight: 300;
+  font-size: 2rem;
+  padding-left: 0.5rem;
+  color: #77926a;
+  display: inline-block;
+  animation: blink 1s step-end infinite;
+}
+
 /* Mobile styles */
 @media (max-width: 768px) {
   .container {
@@ -85,6 +94,6 @@ body {
     color: transparent;
   }
   50% {
-    color: black;
+    color: #77926a;
   }
 }

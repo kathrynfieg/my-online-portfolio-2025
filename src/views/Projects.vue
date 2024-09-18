@@ -17,7 +17,7 @@ import tafebuddy from '@/assets/tafebuddy.png';
       <div
         class="w-full max-w-full h-fit lg:max-w-[35%] lg:sticky lg:top-24 flex flex-col gap-4"
       >
-        <h1 class="big-header">
+        <h1 class="big-header text-traveler-blue">
           Notable (or just fun<box-icon name="smile"></box-icon>) side-projects
           i've worked on
         </h1>
