@@ -31,14 +31,16 @@ const experiences = [
     <h1 class="small-header">About Me<span class="blinking-cursor">|</span></h1>
     <div class="flex flex-col gap-6 md:gap-20 md:flex-row">
       <h1 class="big-header">
-        Frontend Developer of 3 years specialising in Vue
+        Frontend Developer of 3 years and I finally built a personal portfolio!
       </h1>
       <div class="flex flex-col justify-between gap-4">
         <p>
-          I'm currently a full-time Frontend developer based in Adelaide,
-          Australia and I love what I do. My journey in web development has been
-          an exciting blend of creativity and logic, and I'm always eager to
-          learn new things and take on new challenges.
+          I'm a full-time frontend developer located in Adelaide, Australia, and
+          I truly enjoy my work. My career began as an intern at PwC, where I
+          delved into Vue and React on a large-scale internal project,
+          eventually advancing to the role of Senior Associate.<br /><br />
+          Currently, I'm diving into the thrilling realm of startups working
+          closely with passionate entrepreneurs and developers.
         </p>
         <Button
           variant="secondary"
@@ -50,7 +52,16 @@ const experiences = [
       </div>
     </div>
     <div class="me-photo"></div>
-    <p>
+    <div class="font-medium text-xl">
+      <box-icon type="solid" name="quote-alt-left"></box-icon>
+      This was one of the best parts of being a coder, and an artist: the thrill
+      of being in the middle of creating something delightful. It's like the
+      anticipation of eating freshly baked bread after its aroma fills the room.
+      <box-icon name="quote-alt-right" type="solid"></box-icon>
+      <br />
+      <span class="font-normal">- Dr. Joy Buolamwini, "Unmasking AI"</span>
+    </div>
+    <!-- <p>
       Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
       tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
       veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
@@ -58,7 +69,7 @@ const experiences = [
       velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
       cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id
       est laborum.
-    </p>
+    </p> -->
 
     <h1 class="small-header">What i've worked with</h1>
     <div class="flex flex-wrap gap-2">
