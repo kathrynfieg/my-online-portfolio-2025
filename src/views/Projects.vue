@@ -67,8 +67,8 @@ import portfolio from '@/assets/portfolio-square.png';
           :number="4"
           :actions="[
             {
-              label: 'Video walkthrough',
-              link: 'https://www.youtube.com/watch?v=MSR6I0BNxks&ab_channel=KathrynFieg',
+              label: 'Preview clip',
+              link: 'https://private-user-images.githubusercontent.com/47712157/158059716-3a5e0d60-b12a-4a52-a480-1f26680518fd.mp4?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3MjY3NDI2MDEsIm5iZiI6MTcyNjc0MjMwMSwicGF0aCI6Ii80NzcxMjE1Ny8xNTgwNTk3MTYtM2E1ZTBkNjAtYjEyYS00YTUyLWE0ODAtMWYyNjY4MDUxOGZkLm1wND9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNDA5MTklMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjQwOTE5VDEwMzgyMVomWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPTBlZDFmMWNjMjJmYjU3YTIxOWY0NTYxMDdjNmYzMWQ2OGY3Mzc4MzVjMjEzMDNkNDRlYzZlNDI2ZDdmMjQ2ZjMmWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0JmFjdG9yX2lkPTAma2V5X2lkPTAmcmVwb19pZD0wIn0.FSfypfiZ6Fn4r97K8Q4BzfbbtNCo5IVmuiRz5Z9wk70',
             },
           ]"
         />
