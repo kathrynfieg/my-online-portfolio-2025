@@ -34,14 +34,18 @@ const experiences = [
         Frontend Developer of 3 years and I finally built a personal portfolio!
       </h1>
       <div class="flex flex-col justify-between gap-4">
-        <p>
-          I'm a full-time frontend developer located in Adelaide, Australia, and
-          I truly enjoy my work. My career began as an intern at PwC, where I
-          delved into Vue and React on a large-scale internal project,
-          eventually advancing to the role of Senior Associate.<br /><br />
-          Currently, I'm diving into the thrilling realm of startups working
-          closely with passionate entrepreneurs and developers.
-        </p>
+        <div class="text-lg">
+          <box-icon type="solid" name="quote-alt-left"></box-icon>
+          This was one of the best parts of being a coder, and an artist: the
+          thrill of being in the middle of creating something delightful. It's
+          like the anticipation of eating freshly baked bread after its aroma
+          fills the room.
+          <box-icon name="quote-alt-right" type="solid"></box-icon>
+          <br /><br />
+          <span class="font-normal text-lg">
+            - Dr. Joy Buolamwini, "Unmasking AI"
+          </span>
+        </div>
         <Button
           variant="secondary"
           class="md:w-fit md:self-end"
@@ -52,24 +56,14 @@ const experiences = [
       </div>
     </div>
     <div class="me-photo"></div>
-    <div class="font-medium text-xl">
-      <box-icon type="solid" name="quote-alt-left"></box-icon>
-      This was one of the best parts of being a coder, and an artist: the thrill
-      of being in the middle of creating something delightful. It's like the
-      anticipation of eating freshly baked bread after its aroma fills the room.
-      <box-icon name="quote-alt-right" type="solid"></box-icon>
-      <br />
-      <span class="font-normal">- Dr. Joy Buolamwini, "Unmasking AI"</span>
-    </div>
-    <!-- <p>
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-      tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-      veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-      commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-      velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-      cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id
-      est laborum.
-    </p> -->
+    <p>
+      I'm a full-time frontend developer based in Adelaide, Australia, and I
+      truly enjoy my work. My professional journey began as an intern at PwC,
+      where I delved into Vue and React on a large-scale internal project,
+      eventually advancing to the role of Senior Associate. Currently, I'm
+      diving into the thrilling realm of startups working closely with
+      passionate entrepreneurs and and an amazing team of developers.
+    </p>
 
     <h1 class="small-header">What i've worked with</h1>
     <div class="flex flex-wrap gap-2">
