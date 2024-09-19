@@ -1,11 +1,20 @@
 <script setup lang="ts">
-import { ref } from 'vue';
+import { ref, watch } from 'vue';
+import { useRoute } from 'vue-router';
 
 const isMenuOpen = ref(false);
+const route = useRoute();
 
 function toggleMenu() {
   isMenuOpen.value = !isMenuOpen.value;
 }
+
+watch(
+  () => route.path,
+  () => {
+    if (isMenuOpen.value) toggleMenu();
+  }
+);
 </script>
 
 <template>
@@ -18,9 +27,9 @@ function toggleMenu() {
         <box-icon name="menu"></box-icon>
       </button>
       <div :class="['navbar-links', { 'is-active': isMenuOpen }]">
-        <RouterLink to="/about">About</RouterLink>
-        <RouterLink to="/projects">Projects</RouterLink>
-        <RouterLink to="/blog">Blog</RouterLink>
+        <RouterLink active-class="active" to="/about">About</RouterLink>
+        <RouterLink active-class="active" to="/projects">Projects</RouterLink>
+        <RouterLink active-class="active" to="/blog">Blog</RouterLink>
         <a href="https://github.com/kathrynfieg" target="_blank">
           <box-icon type="logo" name="github" />
         </a>
@@ -48,12 +57,13 @@ function toggleMenu() {
 }
 
 .navbar-links a {
-  text-decoration: none;
   color: black;
 }
 
-.navbar-links a:hover {
+.navbar-links a:hover,
+.active {
   text-decoration: underline;
+  text-decoration-thickness: 3px;
 }
 
 .navbar-menu {
