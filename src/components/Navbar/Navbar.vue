@@ -30,12 +30,14 @@ watch(
         <RouterLink active-class="active" to="/about">About</RouterLink>
         <RouterLink active-class="active" to="/projects">Projects</RouterLink>
         <RouterLink active-class="active" to="/blog">Blog</RouterLink>
-        <a href="https://github.com/kathrynfieg" target="_blank">
-          <box-icon type="logo" name="github" />
-        </a>
-        <a href="https://www.linkedin.com/in/kathrynfieg/" target="_blank">
-          <box-icon type="logo" name="linkedin-square" />
-        </a>
+        <div class="flex gap-6">
+          <a href="https://github.com/kathrynfieg" target="_blank">
+            <box-icon type="logo" name="github" />
+          </a>
+          <a href="https://www.linkedin.com/in/kathrynfieg/" target="_blank">
+            <box-icon type="logo" name="linkedin-square" />
+          </a>
+        </div>
       </div>
     </nav>
   </div>
