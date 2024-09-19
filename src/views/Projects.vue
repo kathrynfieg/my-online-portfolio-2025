@@ -3,8 +3,7 @@ import { ProjectCard } from '@/components';
 
 import tafebuddy from '@/assets/tafebuddy-square.png';
 import handleit from '@/assets/handleit-square.png';
-// import tafebuddy from '@/assets/tafebuddy-portrait.png';
-// import handleit from '@/assets/handleit-portrait.png';
+import portfolio from '@/assets/portfolio-square.png';
 </script>
 
 <template>
@@ -23,8 +22,8 @@ import handleit from '@/assets/handleit-square.png';
           i've worked on
         </h1>
         <p>
-          Im a huge fan of Vue 3 and love working with it daily in my Job - But
-          I do plan on playing around with different tech for my side-projects!
+          I'm a big fan of Vue and love using it in my daily role, but I'm also
+          excited to explore other technologies for my side projects!
         </p>
       </div>
 
@@ -32,30 +31,40 @@ import handleit from '@/assets/handleit-square.png';
       <div class="flex flex-col gap-10">
         <ProjectCard
           name="PupSpot Adelaide"
-          description="Website built for our family-owned cleaning business, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-          date="2024"
+          description="Currently building—PupSpot Adelaide is a Web app designed for dog lovers in Adelaide. It helps users discover dog-friendly parks and places, with features like geolocation and detailed venue information to ensure a great experience for pets and their owners."
+          date="2024 • In progress"
           :tech="['Vue', 'Firebase', 'Typescript']"
           :number="1"
         />
 
         <ProjectCard
-          name="Handleit Cleaning Adelaide"
-          description="Website built for our family-owned cleaning business, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+          name="Online Portfolio"
+          description="Yes - I added my portfolio to the list! I finally built a personal portfolio and will start coding outside of work. I plan to keep improving it over time and will be adding a blog, night mode, etc."
           date="2024"
-          liveLink="https://www.handleitcleaning.com.au/"
-          :tech="['Webflow', 'BookingKoala']"
-          :photo="handleit"
+          :photo="portfolio"
+          sourceCodeLink="https://github.com/kathrynfieg/my-online-portfolio-2025"
+          :tech="['Vue', 'Tailwind', 'Typescript', 'UI/UX']"
           :number="2"
         />
 
         <ProjectCard
+          name="Handleit Cleaning"
+          description="Website built for our family-owned cleaning business, designed to showcase the services we offer in Adelaide. Built with Webflow and integrated with Booking Koala, it streamlines online bookings, payments, and reviews, providing a seamless experience for our customers."
+          date="2024"
+          liveLink="https://www.handleitcleaning.com.au/"
+          :tech="['Webflow', 'BookingKoala']"
+          :photo="handleit"
+          :number="3"
+        />
+
+        <ProjectCard
           name="TafeBuddy"
-          description="TAFE SA's Student Results View (SRV) app. elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+          description="An oldie but a goodie: the TAFE SA Student Results View (SRV) app. I built this with two fellow student developers during my time at TAFE SA as part of our Capstone project. The app addresses the challenge of manually tracking student qualifications by providing a clear display of their progress and grades."
           sourceCodeLink="https://github.com/kathrynfieg/TafeBuddy_SRV_App"
           date="2020"
           :tech="['UWP', 'C#', 'XAML', 'UI/UX', 'MySQL']"
           :photo="tafebuddy"
-          :number="3"
+          :number="4"
           :actions="[
             {
               label: 'Video walkthrough',

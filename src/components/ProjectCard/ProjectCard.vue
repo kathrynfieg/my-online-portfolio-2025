@@ -74,7 +74,7 @@ defineProps({
         <!-- Project description -->
         <div>
           <!-- <div class="text-sm text-gray-400">Description</div> -->
-          <ReadMore :content="description" :lines="3"></ReadMore>
+          <ReadMore :content="description" :lines="2"></ReadMore>
         </div>
       </div>
 
