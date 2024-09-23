@@ -4,6 +4,7 @@ import { ProjectCard } from '@/components';
 import tafebuddy from '@/assets/tafebuddy-square.png';
 import handleit from '@/assets/handleit-square.png';
 import portfolio from '@/assets/portfolio-square.png';
+import istherework from '@/assets/istherework-square.png';
 </script>
 
 <template>
@@ -29,13 +30,12 @@ import portfolio from '@/assets/portfolio-square.png';
 
       <!-- Project list -->
       <div class="flex flex-col gap-10">
-        <ProjectCard
+        <!-- <ProjectCard
           name="PupSpot Adelaide"
           description="Currently building—PupSpot Adelaide is a Web app designed for dog lovers in Adelaide. It helps users discover dog-friendly parks and places, with features like geolocation and detailed venue information to ensure a great experience for pets and their owners."
           date="2024 • In progress"
           :tech="['Vue', 'Firebase', 'Typescript']"
-          :number="1"
-        />
+        /> -->
 
         <ProjectCard
           name="Online Portfolio"
@@ -44,7 +44,24 @@ import portfolio from '@/assets/portfolio-square.png';
           :photo="portfolio"
           sourceCodeLink="https://github.com/kathrynfieg/my-online-portfolio-2025"
           :tech="['Vue', 'Tailwind', 'Typescript', 'UI/UX']"
-          :number="2"
+        />
+
+        <ProjectCard
+          name="IsThereWorkToday"
+          description="A fun and quirky web app that checks if today is a public holiday in Australia based on your location! If it's not a holiday, it gives you a playful message and counts down to the next one, complete with cheeky encouragement and a random gif (thanks to the Giphy API)."
+          date="2024 • Mini Project"
+          :photo="istherework"
+          :tech="[
+            'Vue',
+            'TypeScript',
+            'Vue query',
+            'Geolocation',
+            'LocationIQ API',
+            'Nager.Date API',
+            'Giphy API',
+            'Tailwind',
+          ]"
+          sourceCodeLink="https://github.com/kathrynfieg/isthereworktoday"
         />
 
         <ProjectCard
@@ -54,7 +71,6 @@ import portfolio from '@/assets/portfolio-square.png';
           liveLink="https://www.handleitcleaning.com.au/"
           :tech="['Webflow', 'BookingKoala']"
           :photo="handleit"
-          :number="3"
         />
 
         <ProjectCard
@@ -64,7 +80,6 @@ import portfolio from '@/assets/portfolio-square.png';
           date="2020"
           :tech="['UWP', 'C#', 'XAML', 'UI/UX', 'MySQL']"
           :photo="tafebuddy"
-          :number="4"
           :actions="[
             {
               label: 'Preview clip',
