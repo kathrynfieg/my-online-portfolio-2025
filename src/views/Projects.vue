@@ -30,13 +30,6 @@ import istherework from '@/assets/istherework-square.png';
 
       <!-- Project list -->
       <div class="flex flex-col gap-10">
-        <!-- <ProjectCard
-          name="PupSpot Adelaide"
-          description="Currently building—PupSpot Adelaide is a Web app designed for dog lovers in Adelaide. It helps users discover dog-friendly parks and places, with features like geolocation and detailed venue information to ensure a great experience for pets and their owners."
-          date="2024 • In progress"
-          :tech="['Vue', 'Firebase', 'Typescript']"
-        /> -->
-
         <ProjectCard
           name="Online Portfolio"
           description="Yes - I added my portfolio to the list! I finally built a personal portfolio and will start coding outside of work. I plan to keep improving it over time and will be adding a blog, night mode, etc."
@@ -62,6 +55,7 @@ import istherework from '@/assets/istherework-square.png';
             'Tailwind',
           ]"
           sourceCodeLink="https://github.com/kathrynfieg/isthereworktoday"
+          liveLink="https://isthereworktoday.netlify.app/"
         />
 
         <ProjectCard
