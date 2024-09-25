@@ -2,16 +2,20 @@
 import router from '@/router';
 import { Button } from '@/components';
 </script>
-
 <template>
   <div class="container container-spacing">
     <p class="small-header">Hello! I'm Kat.</p>
     <h1 class="big-header">
-      Inspired <span class="role">frontend developer</span>, building web
-      applications with heart.<span class="blinking-cursor">|</span>
+      Inspired <span class="role">frontend developer</span>, building web apps
+      for a living - and sometimes for fun
+      <span class="blinking-cursor">|</span>
     </h1>
-    <Button variant="secondary" @click="router.push('/projects')" class="w-40">
-      My Projects
+    <Button
+      variant="secondary"
+      @click="router.push('/projects')"
+      class="w-fit flex items-center gap-2"
+    >
+      Check out my Projects <box-icon type="solid" name="rocket"></box-icon>
     </Button>
   </div>
 </template>
