@@ -7,8 +7,9 @@ import { Button } from '@/components';
     <div>
       <p class="small-header">Hello! I'm Kat.</p>
       <h1 class="big-header">
-        Inspired <span class="role">frontend developer</span>, building web apps
-        for a living - and sometimes for fun
+        Inspired
+        <span class="bg-black text-white pl-2 pr-4">frontend developer</span>,
+        building web apps for a living - and sometimes for fun
         <span class="blinking-cursor">|</span>
       </h1>
     </div>
@@ -20,13 +21,6 @@ import { Button } from '@/components';
 </template>
 
 <style scoped>
-.role {
-  background-color: black;
-  padding-left: 0.5rem;
-  padding-right: 1rem;
-  color: white;
-}
-
 .blinking-cursor {
   font-weight: 300;
   font-size: 4rem;
