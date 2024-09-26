@@ -10,12 +10,8 @@ import { Button } from '@/components';
       for a living - and sometimes for fun
       <span class="blinking-cursor">|</span>
     </h1>
-    <Button
-      variant="secondary"
-      @click="router.push('/projects')"
-      class="w-fit flex items-center gap-2"
-    >
-      Check out my Projects <box-icon type="solid" name="rocket"></box-icon>
+    <Button variant="secondary" @click="router.push('/projects')" class="w-40">
+      My Projects
     </Button>
   </div>
 </template>

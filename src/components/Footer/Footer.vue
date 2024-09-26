@@ -2,6 +2,6 @@
   <footer
     class="flex justify-center items-center p-4 text-sm w-full text-center bg-black text-white"
   >
-    <p>Built & Designed by Kathryn Fieg | kathrynfieg@gmail.com</p>
+    <p>Built & Designed by Kathryn Fieg</p>
   </footer>
 </template>
