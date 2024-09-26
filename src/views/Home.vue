@@ -4,12 +4,15 @@ import { Button } from '@/components';
 </script>
 <template>
   <div class="container container-spacing">
-    <p class="small-header">Hello! I'm Kat.</p>
-    <h1 class="big-header">
-      Inspired <span class="role">frontend developer</span>, building web apps
-      for a living - and sometimes for fun
-      <span class="blinking-cursor">|</span>
-    </h1>
+    <div>
+      <p class="small-header">Hello! I'm Kat.</p>
+      <h1 class="big-header">
+        Inspired <span class="role">frontend developer</span>, building web apps
+        for a living - and sometimes for fun
+        <span class="blinking-cursor">|</span>
+      </h1>
+    </div>
+
     <Button variant="secondary" @click="router.push('/projects')" class="w-40">
       My Projects
     </Button>
