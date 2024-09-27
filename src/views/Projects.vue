@@ -1,10 +1,10 @@
 <script setup lang="ts">
+import { useFirestore, useCollection } from 'vuefire';
+import { collection } from 'firebase/firestore';
 import { ProjectCard } from '@/components';
 
-import tafebuddy from '@/assets/tafebuddy-square.png';
-import handleit from '@/assets/handleit-square.png';
-import portfolio from '@/assets/portfolio-square.png';
-import istherework from '@/assets/istherework-square.png';
+const db = useFirestore();
+const projectCollection = useCollection(collection(db, 'projects'));
 </script>
 
 <template>
@@ -14,7 +14,7 @@ import istherework from '@/assets/istherework-square.png';
     </h1>
 
     <div class="flex flex-col gap-4 lg:flex-row lg:gap-20">
-      <!-- header -->
+      <!-- Header -->
       <div
         class="w-full max-w-full h-fit lg:max-w-[35%] lg:sticky lg:top-24 flex flex-col gap-4"
       >
@@ -31,55 +31,16 @@ import istherework from '@/assets/istherework-square.png';
       <!-- Project list -->
       <div class="flex flex-col gap-10">
         <ProjectCard
-          name="Online Portfolio"
-          description="Yes - I added my portfolio to the list! I finally built a personal portfolio and will start coding outside of work. I plan to keep improving it over time and will be adding a blog, night mode, etc."
-          date="2024"
-          :photo="portfolio"
-          sourceCodeLink="https://github.com/kathrynfieg/my-online-portfolio-2025"
-          :tech="['Vue', 'Tailwind', 'Typescript', 'UI/UX']"
-        />
-
-        <ProjectCard
-          name="IsThereWorkToday"
-          description="A fun and quirky web app that checks if today is a public holiday in Australia based on your location! If it's not a holiday, it gives you a playful message and counts down to the next one, complete with cheeky encouragement and a random gif (thanks to the Giphy API)."
-          date="2024 • Mini Project"
-          :photo="istherework"
-          :tech="[
-            'Vue',
-            'TypeScript',
-            'Vue query',
-            'Geolocation',
-            'LocationIQ API',
-            'Nager.Date API',
-            'Giphy API',
-            'Tailwind',
-          ]"
-          sourceCodeLink="https://github.com/kathrynfieg/isthereworktoday"
-          liveLink="https://istherework.today"
-        />
-
-        <ProjectCard
-          name="Handleit Cleaning"
-          description="Website built for our family-owned cleaning business, designed to showcase the services we offer in Adelaide. Built with Webflow and integrated with Booking Koala, it streamlines online bookings, payments, and reviews, providing a seamless experience for our customers."
-          date="2024"
-          liveLink="https://www.handleitcleaning.com.au/"
-          :tech="['Webflow', 'BookingKoala']"
-          :photo="handleit"
-        />
-
-        <ProjectCard
-          name="TafeBuddy"
-          description="An oldie but a goodie: the TAFE SA Student Results View (SRV) app. I built this with two fellow student developers during my time at TAFE SA as part of our Capstone project. The app addresses the challenge of manually tracking student qualifications by providing a clear display of their progress and grades."
-          sourceCodeLink="https://github.com/kathrynfieg/TafeBuddy_SRV_App"
-          date="2020"
-          :tech="['UWP', 'C#', 'XAML', 'UI/UX', 'MySQL']"
-          :photo="tafebuddy"
-          :actions="[
-            {
-              label: 'Preview clip',
-              link: 'https://youtu.be/0Y-oiwLbFMA',
-            },
-          ]"
+          v-for="project in projectCollection"
+          :key="project.title"
+          :name="project.title"
+          :date="project.subtitle"
+          :description="project.description"
+          :photo="project.imageUrl"
+          :tech="project.tech"
+          :liveLink="project.liveLink"
+          :sourceCodeLink="project.sourceCodeLink"
+          :actions="project.otherLinks"
         />
 
         <!-- See more link -->

@@ -3,7 +3,7 @@ import { Button, Chip, ReadMore } from '@/components';
 
 export type IProjectCardActions = {
   label: string;
-  link: string;
+  source: string;
 };
 
 defineProps({
@@ -98,7 +98,7 @@ defineProps({
             size="sm"
             v-for="(action, index) in actions"
             :key="index"
-            :href="action.link"
+            :href="action.source"
             >{{ action.label }}
           </Button>
         </div>
