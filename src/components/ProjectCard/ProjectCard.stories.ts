@@ -12,12 +12,12 @@ type Story = StoryObj<typeof ProjectCard>;
 
 export const Default: Story = {
   args: {
-    name: 'PupSpot Adelaide',
+    title: 'PupSpot Adelaide',
     description:
       'Website built for our family-owned cleaning business, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Website built for our family-owned cleaning business, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Website built for our family-owned cleaning business, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Website built for our family-owned cleaning business, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Website built for our family-owned cleaning business, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Website built for our family-owned cleaning business, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
     tech: ['Vue', 'Firebase', 'Typescript'],
     liveLink: 'https://www.handleitcleaning.com.au/',
-    photo: img,
+    projectImg: img,
   },
   render: (args) => ({
     components: { ProjectCard },

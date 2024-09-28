@@ -33,14 +33,14 @@ const projectCollection = useCollection(collection(db, 'projects'));
         <ProjectCard
           v-for="project in projectCollection"
           :key="project.title"
-          :name="project.title"
-          :date="project.subtitle"
+          :title="project.title"
+          :subtitle="project.subtitle"
           :description="project.description"
-          :photo="project.imageUrl"
+          :projectImg="project.imageUrl"
           :tech="project.tech"
           :liveLink="project.liveLink"
           :sourceCodeLink="project.sourceCodeLink"
-          :actions="project.otherLinks"
+          :otherLinks="project.otherLinks"
         />
 
         <!-- See more link -->

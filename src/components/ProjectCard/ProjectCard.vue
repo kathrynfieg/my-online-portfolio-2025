@@ -1,13 +1,17 @@
 <script setup lang="ts">
 import { Button, Chip, ReadMore } from '@/components';
 
-export type IProjectCardActions = {
+export type IProjectCardLinks = {
   label: string;
   source: string;
 };
 
 defineProps({
-  name: {
+  title: {
+    type: String,
+    default: '',
+  },
+  subtitle: {
     type: String,
     default: '',
   },
@@ -15,11 +19,7 @@ defineProps({
     type: String,
     default: '',
   },
-  photo: {
-    type: String,
-    default: '',
-  },
-  date: {
+  projectImg: {
     type: String,
     default: '',
   },
@@ -35,8 +35,8 @@ defineProps({
     type: String,
     default: '',
   },
-  actions: {
-    type: Array<IProjectCardActions>,
+  otherLinks: {
+    type: Array<IProjectCardLinks>,
     default: [],
   },
   number: {
@@ -50,7 +50,7 @@ defineProps({
   <div class="flex flex-col p-3 gap-4 rounded-lg md:flex-row bg-white border">
     <!-- Project image desktop -->
     <div class="img-wrapper hidden md:block">
-      <img v-if="photo" :src="photo" />
+      <img v-if="projectImg" :src="projectImg" />
     </div>
 
     <div class="flex flex-col justify-between gap-8">
@@ -58,8 +58,8 @@ defineProps({
         <!-- Project name -->
         <div class="flex items-start justify-between">
           <div>
-            <div class="font-semibold text-lg">{{ name }}</div>
-            <div class="text-sm text-gray-400">{{ date }}</div>
+            <div class="font-semibold text-lg">{{ title }}</div>
+            <div class="text-sm text-gray-400">{{ subtitle }}</div>
           </div>
           <div v-if="number" class="px-3 bg-black text-white font-bold">
             {{ number }}
@@ -68,7 +68,7 @@ defineProps({
 
         <!-- Project image mobile -->
         <div class="img-wrapper md:hidden">
-          <img v-if="photo" :src="photo" />
+          <img v-if="projectImg" :src="projectImg" />
         </div>
 
         <!-- Project description -->
@@ -96,10 +96,10 @@ defineProps({
           </Button>
           <Button
             size="sm"
-            v-for="(action, index) in actions"
+            v-for="(link, index) in otherLinks"
             :key="index"
-            :href="action.source"
-            >{{ action.label }}
+            :href="link.source"
+            >{{ link.label }}
           </Button>
         </div>
       </div>
