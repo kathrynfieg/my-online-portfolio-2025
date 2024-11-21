@@ -3,7 +3,12 @@
  * TODO
  * - more on flex spacing specially for about header and projects
  */
-import { Navbar, Footer } from '@/components';
+import { Navbar, Footer } from "@/components";
+import { watchEffect } from "vue";
+
+watchEffect(() => {
+  document.body.classList.add("dark");
+});
 </script>
 
 <template>
