@@ -9,14 +9,45 @@
 @tailwind utilities;
 
 /* Global CSS Variables*/
-:root {
-  --primary-color: #3498db;
+.light {
+  --background: #fff;
+  --navbar: #fff;
+  --footer-bg: #000;
+  --footer-text: #fff;
+  --text: #000;
+  --header: #000;
+  --primary: #000;
+  --primary-text: #fff;
+  --secondary: #fff;
+  --secondary-text: #000;
+  --card-bg: #fff;
+  --card-text: #000;
+  --tag-bg: #e5e7eb;
+  --tag-text: #000;
+}
+
+.dark {
+  --background: #1b1b1b;
+  --navbar: #1b1b1b;
+  --footer-bg: #ececec;
+  --footer-text: #1b1b1b;
+  --text: #ececec;
+  --header: #ececec;
+  --primary: #ececec;
+  --primary-text: #1b1b1b;
+  --secondary: #1b1b1b;
+  --secondary-text: #ececec;
+  --card-bg: #302f2f;
+  --card-text: #ececec;
+  --tag-bg: #4b4b4b;
+  --tag-text: #ececec;
 }
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  color: var(--text);
 }
 
 body {
@@ -27,7 +58,7 @@ body {
   line-height: 1.6;
   margin: 0;
   padding: 0;
-  background-color: #fafafa;
+  background: var(--background);
 }
 
 .container {
@@ -85,6 +116,6 @@ body {
     color: transparent;
   }
   50% {
-    color: black;
+    color: var(--text);
   }
 }

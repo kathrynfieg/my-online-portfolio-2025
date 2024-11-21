@@ -8,8 +8,9 @@ import { Button } from '@/components';
       <p class="small-header">Hello! I'm Kat.</p>
       <h1 class="big-header">
         Inspired
-        <span class="bg-black text-white pl-2 pr-4">frontend developer</span>,
-        building web apps for a living - and sometimes for fun
+        <span class="bg-primary text-primary-text pl-2 pr-4"
+          >frontend developer</span
+        >, building web apps for a living - and sometimes for fun
         <span class="blinking-cursor">|</span>
       </h1>
     </div>

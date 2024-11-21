@@ -4,6 +4,12 @@
  * - more on flex spacing specially for about header and projects
  */
 import { Navbar, Footer } from '@/components';
+import { watchEffect } from 'vue';
+
+watchEffect(() => {
+  // document.body.classList.add('dark');
+  document.body.classList.add('light');
+});
 </script>
 
 <template>

@@ -37,9 +37,9 @@ defineProps({
     :class="[
       `button-${size}`,
       {
-        'bg-black text-white border border-black hover:bg-white hover:text-black':
+        'bg-primary text-primary-text border border-primary hover:bg-primary-text hover:text-primary':
           variant === 'primary',
-        'bg-white text-black border border-black hover:bg-black hover:text-white':
+        'bg-secondary text-secondary-text border border-secondary-text hover:bg-secondary-text hover:text-secondary':
           variant === 'secondary',
       },
     ]"

@@ -18,7 +18,7 @@ watch(
 </script>
 
 <template>
-  <div class="w-dvw fixed bg-white">
+  <div class="w-dvw fixed bg-navbar">
     <nav class="navbar">
       <RouterLink to="/"
         ><h1 class="small-header font-bold">kat.fieg</h1>
@@ -50,16 +50,12 @@ watch(
   align-items: center;
   padding: 1rem;
   position: relative;
-  border-bottom: 2px solid black;
+  border-bottom: 2px solid var(--text);
 }
 
 .navbar-links {
   display: flex;
   gap: 1.5rem;
-}
-
-.navbar-links a {
-  color: black;
 }
 
 .navbar-links a:hover,

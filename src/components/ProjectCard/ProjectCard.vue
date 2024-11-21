@@ -47,7 +47,7 @@ defineProps({
 </script>
 
 <template>
-  <div class="flex flex-col p-3 gap-4 rounded-lg md:flex-row bg-white border">
+  <div class="flex flex-col p-3 gap-4 rounded-lg md:flex-row bg-card-bg border">
     <!-- Project image desktop -->
     <div class="img-wrapper hidden md:block">
       <img v-if="projectImg" :src="projectImg" />
