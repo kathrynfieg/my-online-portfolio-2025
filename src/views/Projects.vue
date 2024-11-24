@@ -4,7 +4,11 @@ import { collection } from 'firebase/firestore';
 import { ProjectCard } from '@/components';
 
 const db = useFirestore();
-const projectCollection = useCollection(collection(db, 'projects'));
+const {
+  data: projects,
+  pending,
+  error,
+} = useCollection(collection(db, 'projects'));
 </script>
 
 <template>
@@ -29,19 +33,32 @@ const projectCollection = useCollection(collection(db, 'projects'));
       </div>
 
       <!-- Project list -->
-      <div class="flex flex-col gap-10">
-        <ProjectCard
-          v-for="project in projectCollection"
-          :key="project.title"
-          :title="project.title"
-          :subtitle="project.subtitle"
-          :description="project.description"
-          :projectImg="project.imageUrl"
-          :tech="project.tech"
-          :liveLink="project.liveLink"
-          :sourceCodeLink="project.sourceCodeLink"
-          :otherLinks="project.otherLinks"
-        />
+      <div class="flex flex-col gap-10 w-full">
+        <transition name="fade" class="flex flex-col gap-10">
+          <div v-if="pending">
+            <ProjectCard v-for="index in 3" :key="index" isLoading />
+          </div>
+
+          <div v-else-if="error">
+            Oops, something went wrong while loading my projects. Please try
+            again later or check back soon.
+          </div>
+
+          <div v-else>
+            <ProjectCard
+              v-for="project in projects"
+              :key="project.title"
+              :title="project.title"
+              :subtitle="project.subtitle"
+              :description="project.description"
+              :projectImg="project.imageUrl"
+              :tech="project.tech"
+              :liveLink="project.liveLink"
+              :sourceCodeLink="project.sourceCodeLink"
+              :otherLinks="project.otherLinks"
+            />
+          </div>
+        </transition>
 
         <!-- See more link -->
         <a
@@ -56,3 +73,15 @@ const projectCollection = useCollection(collection(db, 'projects'));
     </div>
   </div>
 </template>
+
+<style lang="css" scoped>
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.25s ease;
+}
+
+.fade-enter-from,
+.fade-leave-to {
+  opacity: 0;
+}
+</style>

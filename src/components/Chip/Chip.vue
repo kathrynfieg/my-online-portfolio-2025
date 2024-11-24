@@ -18,7 +18,7 @@ defineProps({
 <template>
   <div
     :class="[
-      'bg-tag-bg text-tag-text w-fit px-4 py-0.5 rounded-lg',
+      'bg-[#e5e7eb] text-black w-fit px-4 py-0.5 rounded-lg',
       {
         'text-sm px-3': size === 'sm',
         'text-xs px-2': size === 'xs',

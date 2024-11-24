@@ -43,11 +43,31 @@ defineProps({
     type: Number,
     default: null,
   },
+  isLoading: {
+    type: Boolean,
+    default: false,
+  },
 });
 </script>
 
 <template>
-  <div class="flex flex-col p-3 gap-4 rounded-lg md:flex-row bg-card-bg border">
+  <div
+    v-if="isLoading"
+    class="flex flex-col p-3 gap-4 rounded-lg md:flex-row bg-white border mb-4"
+  >
+    <div
+      class="bg-[#f5f5f5] w-[250px] h-[250px] flex-shrink-0 hidden md:block"
+    />
+    <div class="h-full w-full flex flex-col gap-4">
+      <div class="h-[50px] bg-[#f5f5f5] w-full" />
+      <div class="h-[180px] grow bg-[#f5f5f5] w-full" />
+    </div>
+  </div>
+
+  <div
+    v-else
+    class="flex flex-col p-3 gap-4 rounded-lg md:flex-row bg-white border"
+  >
     <!-- Project image desktop -->
     <div class="img-wrapper hidden md:block">
       <img v-if="projectImg" :src="projectImg" />
@@ -110,7 +130,6 @@ defineProps({
 <style scoped>
 .img-wrapper {
   background-color: #fafafa;
-  /* border: 2px black solid; */
   width: 250px !important;
   height: 250px !important;
   flex-shrink: 0;
