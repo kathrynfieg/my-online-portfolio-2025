@@ -53,7 +53,7 @@ defineProps({
 <template>
   <div
     v-if="isLoading"
-    class="flex flex-col p-3 gap-4 rounded-lg md:flex-row bg-white border mb-4"
+    class="flex flex-col p-3 gap-4 rounded-lg md:flex-row bg-white border"
   >
     <div
       class="bg-[#f5f5f5] w-[250px] h-[250px] flex-shrink-0 hidden md:block"
