@@ -3,19 +3,23 @@ import router from '@/router';
 import { Button } from '@/components';
 </script>
 <template>
-  <div class="container container-spacing">
+  <div class="container flex flex-col gap-4">
     <div>
-      <p class="small-header">Hello! I'm Kat.</p>
+      <p class="small-header mb-6 mt-20">Hello! I'm Kat.</p>
       <h1 class="big-header">
-        Inspired
         <span class="bg-primary text-primary-text pl-2 pr-4"
           >frontend developer</span
-        >, building web apps for a living - and sometimes for fun
+        >
+        creating web experiences— professionally & for fun
         <span class="blinking-cursor">|</span>
       </h1>
     </div>
 
-    <Button variant="secondary" @click="router.push('/projects')" class="w-40">
+    <Button
+      variant="secondary"
+      @click="router.push('/projects')"
+      class="w-40 mt-6"
+    >
       My Projects
     </Button>
   </div>

@@ -71,7 +71,6 @@ body {
 .container-spacing {
   padding-top: 6rem;
   padding-bottom: 3rem;
-
   width: 100%;
   display: flex;
   flex-direction: column;
