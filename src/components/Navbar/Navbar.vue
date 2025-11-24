@@ -18,7 +18,7 @@ watch(
 </script>
 
 <template>
-  <div class="w-dvw fixed bg-navbar">
+  <div class="w-dvw fixed bg-navbar z-50">
     <nav class="navbar">
       <RouterLink to="/"
         ><h1 class="small-header font-bold">kat.fieg</h1>
