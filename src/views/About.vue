@@ -3,26 +3,28 @@ import router from '@/router';
 import { Button, Chip } from '@/components';
 
 const experiences = [
-  'Vue',
+  'Vue 2 & 3',
   'React',
   'Remix',
-  'Javascript',
-  'Typescript',
+  'TypeScript',
+  'Tailwind',
+  'SCSS / SASS',
   'Storybook',
-  'Tailwind CSS',
-  'Vanilla CSS',
-  'SCSS',
-  'SASS',
-  'Vuetify',
+  'UI Libraries',
   'Unit testing',
   'React Testing library',
   'Vitest',
-  'W3C Accessibility',
-  'Localisation (i18n)',
-  'Mongo.DB',
-  'Express.js',
+  'ESLint & Prettier',
   'Git',
+  'Localisation (i18n)',
+  'W3C Accessibility (a11y)',
+  'REST API',
+  'State management',
+  'Tanstack Query',
+  'SQL / NoSQL',
   'Agile',
+  'Github / Devops',
+  'Github Actions',
 ];
 </script>
 
@@ -31,7 +33,7 @@ const experiences = [
     <h1 class="small-header">About Me<span class="blinking-cursor">|</span></h1>
     <div class="flex flex-col gap-6 md:gap-20 md:flex-row">
       <h1 class="big-header">
-        Frontend Developer of 3 years and I finally built a personal portfolio!
+        Frontend Developer of <span class="line-through opacity-20">3</span> 4 years and I finally built a personal portfolio!
       </h1>
       <div class="flex flex-col justify-between gap-4">
         <div class="text-lg">
@@ -62,7 +64,7 @@ const experiences = [
       where I delved into Vue and React on a large-scale internal project,
       eventually advancing to the role of Senior Associate. Currently, I'm
       diving into the thrilling realm of startups working closely with
-      passionate entrepreneurs and and an amazing team of developers.
+      passionate entrepreneurs and an amazing team of developers.
     </p>
 
     <h1 class="small-header">What i've worked with</h1>
