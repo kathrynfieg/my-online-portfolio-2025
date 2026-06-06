@@ -15,7 +15,7 @@ export const Default: Story = {
     title: 'PupSpot Adelaide',
     description:
       'Website built for our family-owned cleaning business, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Website built for our family-owned cleaning business, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Website built for our family-owned cleaning business, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Website built for our family-owned cleaning business, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Website built for our family-owned cleaning business, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Website built for our family-owned cleaning business, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
-    tech: ['Vue', 'Firebase', 'Typescript'],
+    tech: ['Vue', 'TypeScript'],
     liveLink: 'https://www.handleitcleaning.com.au/',
     projectImg: img,
   },
